@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="images/icon.png" type="image.png">
+        <title>Code Clicker - Water Games</title>
+        <link rel='stylesheet' type='text/css' href="main.css">
+        <link rel='stylesheet' type='text/css' href='CodeClicker/main.css'>
+    </head>
+    
+    <body>
+        <script src='header.js'></script>
+        <div class='page'>
+<!--        <input id='modeSwitch' type='checkbox'> -->
+            <header>
+                <ul>
+                    <li><img id='store' src='images/store.png'>
+                        <ul class='items' id='cookie1' onclick='buy(1)'>
+                            <li><img src='images/cookie1.png'> <p>Owned</p></li>
+                        </ul>
+
+                        <ul class='items' id='cookie2' onclick='buy(2)'>
+                            <li><img src='images/cookie2.png'> <p>1000 lines</p></li>
+                        </ul>
+
+                        <ul class='items' id='cookie3' onclick='buy(3)'>
+                            <li><img src='images/cookie3.png'> <p>5000 lines</p></li>
+                        </ul>
+
+                        <ul class='items' id='cookie4' onclick='buy(4)'>
+                            <li><img src='images/cookie4.png'> <p>10000 lines</p></li>
+                        </ul>
+
+                        <ul class='items' id='cookie5' onclick='buy(5)'>
+                            <li><img src='images/cookie5.png'> <p>30000 lines</p></li>
+                        </ul>
+
+                        <ul class='items' id='cookie6' onclick='buy(6)'>
+                            <li><img src='images/cookie6.png'> <p>100000 lines</p></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </header>
+            <h1 id='title'>Code Clicker Pro</h1>
+            <div id='cookieBox'>
+                <div class='cookieShelf'>
+                    <img id='cookie' onclick='lines += pClick' src='images/cookie1.png'>
+                </div>
+            </div>
+
+            <div id='board'>
+                <div class='count'>
+                    <p id='cookies'>you have <span id='cCount'>0</span> lines</p>
+                    <p id='stats'>You gain <span id='cpc'>1</span> lines per click</p>
+                    <p id='stats'>You gain <span id='cps'>0</span> lines per second</p>
+                </div>
+                <br>
+                <ul>
+                    <div id='listB'>
+                        <button onclick='upgrade("b1")'>(<span id='b1'>0</span>) Buy an extra mouse for 30 lines (+1 lines/click)</button>
+                        <button onclick='upgrade("b2")'>(<span id='b2'>0</span>) Buy an extra keyboard for 100 lines (+5 lines/click)</button>
+                        <button onclick='upgrade("b3")'>(<span id='b3'>0</span>) Build a Bot for 500 lines (+20 lines/click)</button>
+                        <button onclick='upgrade("b4")'>(<span id='b4'>0</span>) use TabNine for 3000 lines (+100 lines/click)</button>
+                    </div>
+                    <p> </p>
+                    <div id='listA'>
+                    <button onclick='upgrade("a1")'>(<span id='a1'>0</span>) Buy some Russian Hackers for 100 lines (+1 lines/second)</button>
+                    <button onclick='upgrade("a2")'>(<span id='a2'>0</span>) Buy some advanced Russian Hackers for 255 lines (+5 lines/second)</button>
+                    <button onclick='upgrade("a3")'>(<span id='a3'>0</span>) Buy some Robot Russian Hackers for 700 lines (+30 lines/second)</button>
+                    <button onclick='upgrade("a4")'>(<span id='a4'>0</span>) Buy some Ai's for 1500 lines (+100 lines/second)</button>
+                    <button onclick='upgrade("a5")'>(<span id='a5'>0</span>) Call IT support for 10000 lines (+500 lines/second)</button>
+                    <button onclick='upgrade("a6")'>(<span id='a6'>0</span>) Call Raj from IT support for 100000 lines (+2000 lines/second)</button>
+                    </div>     
+                    <p> </p>
+                    <li><button id='nMode' onclick='Hax()'>Join Cyber Crime Gaurdian Solutions (For Mr. Nolan only) free of charge</button></li>
+                </ul>
+            </div>
+
+            <script type="text/javascript" src='main.js'></script>
+            <div id='here'>
+                <p class='here'>Angel Was Here ⌬</p>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- Hey Mr.Nolan there is some sound as well so dont forget headphones -->

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* ----- root ----- */
+
+:root {
+    --windowWidth: 0;
+    --bannerBase: #ff4500;
+}
+
+/* ----- Key Frames ----- */
+
+@keyframes dropDown {
+    from {
+        visibility: hidden;
+    }
+    
+    to {
+        visibility: visible;
+    }
+}
+
+/* ----- Main ----- */
+
+html {
+    background: linear-gradient( rgba(180, 0, 0, 0.4), rgba(100, 100, 180, 0.4)), url(Images/FlameOrigin.jpg) fixed center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+.controls-list {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    padding: 10px;
+    width: 500px;
+    border-radius: 10px;
+    color: black
+}
+
+#Screen {
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+    border: solid 5px black;
+}
+
+/*header nav list pf games ----------------------*/
+
+header > ul {
+    background-color: var(--bannerBase);
+    padding: 0;
+}
+
+header > ul > li > span, header > ul > li > a {
+    padding: 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+header > ul > li > ul > li > a {
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+header > ul > li {
+    display: inline-block;
+}
+
+
+header > ul > li:hover {
+    background-color: #FF8C00;
+}
+
+
+header > ul > li > ul {
+    background-color: #FF8C00;
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+}
+
+header > ul > li > ul > li:hover{
+    background-color: #ffb938;
+}
+
+header > ul > li:hover > ul {
+    display: block;
+}
+
+.developing {
+    color: #880808;
+}
+
+.personal {
+    color: #08e8de;
+}

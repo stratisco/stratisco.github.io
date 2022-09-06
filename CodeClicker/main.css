@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+* {box-sizing: border-box;}
+
+
+:root {
+    --bgTint: #48596c;
+    --darkTint: #34404d;
+    --board: #ffa54f;
+    --boardOut: #a0522d;
+    --headerHover: 	#53667b;
+}
+
+/* ----- animations ----- */
+
+@keyframes cookieClick {
+    from {
+        width: 200px;
+    }
+    10% {
+        width: 190px;
+    }
+    40% {
+        width: 210px;
+    }
+    to {
+        width: 200px;
+    }
+}
+
+/* ----- base ----- */
+
+body {
+    background: url(images/wallpaper3.jpg) fixed center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#title {
+    border: var(--darkTint) 5px solid;
+    text-align: center;
+    background-color: cornflowerblue;
+    border-radius: 14px;
+    font-size: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* ----- header ----- */
+
+header > ul {
+    background-color: var(--darkTint);
+    padding: 0;
+}
+
+header > ul > li {
+    display: inline-block;
+}
+
+header > ul > li > ul {
+    background-color: #F89C59;
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+header > ul:hover > li > ul {
+    display: inline-block;
+}
+
+/* ----- store ----- */
+
+.items {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+#store {
+    width: 50px;
+    padding: 10px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+.items > li > img {
+    width: 100px;
+    height: 100px;
+}
+
+.items > * {
+    font-family: sans-serif;
+}
+
+#cookie1 {
+    background-color: limegreen;
+}
+
+/* ----- cookie ----- */
+
+.cookieShelf {
+    background: url(images/circles.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px;
+    max-width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cookie {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cookie:active {
+    animation-duration: 0.3s;
+    animation-name: cookieClick;
+}
+
+#cookieBox {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+}
+
+/* ----- board -----*/
+
+#board {
+    background-color: var(--board);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 800px;
+    border: var(--boardOut) 10px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#listA , #listB {
+    width: 300px;
+}
+
+#listB {
+    float: right;
+    margin-left: 400px;
+    position: absolute
+}
+
+#stats, #cookies {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#stats > span , #cookies > span {
+    color: red;
+}
+
+/* ----- here ----- */
+
+.here {
+    visibility: hidden;
+}
+
+#here:hover > .here {
+    visibility: visible;
+    color: cyan;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ----- switch -----*/
+
+/*
+#modeSwitch {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 20px;
+}
+*/
