@@ -33,6 +33,10 @@ body {
     color: white;
 }
 
+h1 {
+    text-align: center;
+}
+
 h2 {
     text-align: center;
 }
@@ -107,4 +111,45 @@ header > ul > li:hover > ul {
 
 .personal {
     color: #08e8de;
+}
+
+
+/* --------- header pages ---------- */
+
+.pageList {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    padding: 30px;
+    width: 700px;
+    border-radius: 10px;
+    color: black;
+    list-style: none;
+}
+
+.pageList > li {
+    padding: 5px;
+}
+
+#null {
+    color: black;
+}
+
+#developing {
+    color: #d00c0c;
+}
+
+#personal {
+    color: #06bab2;
+}
+
+.pageList > li > a {
+    font-size: 17px;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.pageList > li > a:hover {
+    text-decoration: underline;
 }

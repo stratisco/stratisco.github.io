@@ -1,32 +1,37 @@
 var i = 0;
 var cHead;
 var cPage;
-var cVis;
 
 var headers = {
     '1 Player Games': {
-        'src': null,
-        'id': null
+        'src': '1PlayerGames.html',
+        'id': null,
+        'index': 0
     },
  
     '2 Player Games': {
-        'src': null,
-        'id': null
+        'src': '2PlayerGames.html',
+        'id': null,
+        'index': 1
     },
 
     'Self-Coded': {
-        'src': null,
-        'id': null
+        'src': 'selfCoded.html',
+        'id': null,
+        'index': 2
     },
 
     'Links': {
-        'src': null,
-        'id': null
+        'src': 'links.html',
+        'id': null,
+        'index': 3
     },
 
     'Algorithms': {
-        'src': null,
-        'id': null
+        'src': 'algorithms.html',
+        'id': null,
+        'index': 4
+        
     }
 };
 
@@ -34,80 +39,93 @@ var pages = {
     'Asteroid Shooter': {
         'src': 'asteroid.html',
         'tags': '10000',
-        'class': null
+        'class': null,
+        'show': true
     },
 
     'Test Lab': {
         'src': 'asteroid.html',
         'tags': '00100',
-        'class': 'personal'
+        'class': 'personal',
+        'show': true
     },
     
     'Pong' : {
         'src': 'pong.html',
         'tags': '01100',
-        'class': null
+        'class': null,
+        'show': true
     },
     
     'The Box' : {
         'src': 'impossibleGame.html',
         'tags': '10100',
-        'class': 'developing'
+        'class': 'developing',
+        'show': true
     },
     
     'Virtual Physics' : {
         'src': 'virtualPhysicsLab.html',
         'tags': '00100',
-        'class': 'developing'
+        'class': 'developing',
+        'show': false
     },
     
     'Tik Tak Toe' : {
         'src': 'tikTakToe.html',
         'tags': '01100',
-        'class': 'developing'
+        'class': 'developing',
+        'show': false
     },
     
     'Js Keycodes' : {
         'src': 'https://js-keycodes.stackblitz.io/',
         'tags': '00010',
-        'class': null
+        'class': null,
+        'show': true
     },
     
     'Hummas Beings' : {
         'src': 'http://mcserver.pii.at/',
         'tags': '00010',
-        'class': null
+        'class': null,
+        'show': true
     },
     
     'Hummas Server' : {
         'src': 'http://hummasserver.ddns.net/',
         'tags': '00010',
-        'class': null
+        'class': null,
+        'show': true
     },
     
     'Hacked Asteroid Shooter' : {
         'src': 'hackedAsteroid.html',
         'tags': '00100',
-        'class': null
+        'class': null,
+        'show': true
     },
     
     'Math test' : {
         'src': 'math1.html',
         'tags': '00001',
-        'class': null
+        'class': null,
+        'show': true
         
     },
     
     'Bezier Curve' : {
         'src': 'bezier.html',
         'tags': '00001',
-        'class': 'developing'
+        'class': 'developing',
+        'show': false
     }
     
 /*    '3D display' : {
         'src': '3d_display.html',
         'tags': '00101',
-        'class': "developing"
+        'class': "developing",
+        'show': true
         
     }*/
 };
@@ -118,11 +136,9 @@ for (cHead in headers) {
     if (i !== 0) {
         document.write(`</ul>`);
     }
-    cVis = -1;
-    document.write(`</li><li><span>${cHead}</span><ul>`);
+    document.write(`</li><li><a href='${headers[cHead].src}'>${cHead}</a><ul>`);
     for (cPage in pages) {
-        cVis++;
-        if (pages[cPage].tags[i] == 1) {
+        if (pages[cPage].tags[i] == 1 && pages[cPage].show) {
             if (pages[cPage].class == null) {
                 document.write(`<li><a href='${pages[cPage].src}'>${cPage}</a></li>`);
             } else {
