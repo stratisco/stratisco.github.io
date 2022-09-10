@@ -44,7 +44,7 @@ var pages = {
     },
 
     'Test Lab': {
-        'src': 'asteroid.html',
+        'src': 'testLab.html',
         'tags': '00100',
         'class': 'personal',
         'show': true
