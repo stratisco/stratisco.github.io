@@ -20,6 +20,10 @@ var player = {
     }
 };
 
+function randInt(min, max) {
+    return Math.floor(Math.random() * max-min) + min;
+}
+
 var walls = {
     "draw": cnvs.getContext('2d'),
     "pos": [
@@ -46,6 +50,12 @@ var walls = {
             "fillColor": "grey",
             "x": 30, "y": 30, "w": 10, "h": 100,
             "sides": {"T": true, "L": true, "B": true, "R": true}
+        },
+        
+        {
+            "fillColor": "yellow",
+            "x": 400, "y": 300, "w": 5, "h": 200,
+            "sides": {"T": true, "L": false, "B": true, "R": true}
         },
             
         {

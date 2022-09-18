@@ -1,6 +1,12 @@
 var i = 0;
 var cHead;
 var cPage;
+var style = getComputedStyle(document.body);
+var colourMode = 0;
+var tmp;
+var colourList = ['bannerAccent', 'bannerInteract', 'itemHover', 'background'];
+
+document.cookie = "testCookie1=well it works";
 
 var headers = {
     '1 Player Games': {
@@ -44,7 +50,7 @@ var pages = {
     },
 
     'Test Lab': {
-        'src': 'testLab.html',
+        'src': 'asteroid.html',
         'tags': '00100',
         'class': 'personal',
         'show': true
@@ -130,7 +136,18 @@ var pages = {
     }*/
 };
 
-document.write(`<header><ul><li id='home'><a href='index.html'>Home</a></li>`);
+function modeSwitcher(elm) {
+    for (peice in colourList) {
+        tmp = style.getPropertyValue(`--${colourList[peice]}1`);
+        
+            document.body.style.setProperty(`--${colourList[peice]}1`, style.getPropertyValue(`--${colourList[peice]}0`));
+
+        
+        document.body.style.setProperty(`--${colourList[peice]}0`, tmp);
+    }
+}
+
+document.write(`<header><ul><li id='/home'><a href='index.html'>Home</a></li>`);
 
 for (cHead in headers) {
     if (i !== 0) {
@@ -148,7 +165,13 @@ for (cHead in headers) {
     }
     i++;
 }
-document.write(`</ul></li></ul></header>`);
+
+document.write(`</ul></li>
+<label class="modeSwitch">
+<input type="checkbox" onchange="modeSwitcher(this)">
+<div class="ball"></div>
+</label>
+</ul></header>`);
 
 document.addEventListener('keydown', function (key) { // no arrow key web move
   if([37,38,39,40].indexOf(key.keyCode) > -1){

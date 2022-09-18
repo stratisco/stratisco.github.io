@@ -4,12 +4,23 @@
 
 :root {
     --windowWidth: 0;
-    --bannerBase: #ff4500;
+    
+    --background1: linear-gradient( rgba(180, 0, 0, 0.4), rgba(100, 100, 180, 0.4)), url(Images/FlameOrigin.jpg) fixed center;
+    --bannerAccent1: #ff4500;
+    --bannerInteract1: #FF8C00;
+    --itemHover1: #ffb938;
+    
+    --background0: linear-gradient( rgba(180, 0, 0, 0.4), rgba(100, 100, 180, 0.4)), url(Images/pixelBlue.jpg) fixed center;
+    --bannerAccent0: #0073ff;
+    --bannerInteract0: #00baff;
+    --itemHover0: #4dcfff;
+    
+    
 }
 
 /* ----- Key Frames ----- */
 
-@keyframes dropDown {
+@keyframes switchAnimation {
     from {
         visibility: hidden;
     }
@@ -22,7 +33,7 @@
 /* ----- Main ----- */
 
 html {
-    background: linear-gradient( rgba(180, 0, 0, 0.4), rgba(100, 100, 180, 0.4)), url(Images/FlameOrigin.jpg) fixed center;
+    background: var(--background1);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -61,7 +72,7 @@ h2 {
 /*header nav list pf games ----------------------*/
 
 header > ul {
-    background-color: var(--bannerBase);
+    background-color: var(--bannerAccent1);
     padding: 0;
 }
 
@@ -85,12 +96,12 @@ header > ul > li {
 
 
 header > ul > li:hover {
-    background-color: #FF8C00;
+    background-color: var(--bannerInteract1);
 }
 
 
 header > ul > li > ul {
-    background-color: #FF8C00;
+    background-color: var(--bannerInteract1);
     list-style: none;
     padding: 0;
     display: none;
@@ -98,7 +109,7 @@ header > ul > li > ul {
 }
 
 header > ul > li > ul > li:hover{
-    background-color: #ffb938;
+    background-color: var(--itemHover1);
 }
 
 header > ul > li:hover > ul {
@@ -112,6 +123,30 @@ header > ul > li:hover > ul {
 .personal {
     color: #08e8de;
 }
+
+/* ---------- mode switch ---------- */
+
+.modeSwitch {
+    float: right;
+    padding: 20px;
+}
+
+.ball {
+    background:white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--bannerInteract0);
+}
+
+.modeSwitch > input {
+    position: absolute;
+    opacity: 0;
+}
+
+/*.modeSwitch > input[type="checkbox"]:checked + .ball {
+    background: var(--bannerInteract0);
+}*/
 
 
 /* --------- header pages ---------- */
@@ -153,3 +188,4 @@ header > ul > li:hover > ul {
 .pageList > li > a:hover {
     text-decoration: underline;
 }
+
