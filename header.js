@@ -159,9 +159,9 @@ function modeSwitcher(elm=null) {
         
         document.body.style.setProperty(`--${colourList[peice]}0`, tmp);
     }
-    if (getCookie('_colourMode') = 'blue') {
+    if (getCookie('_colourMode') == 'blue') {
         document.cookie = '_colourMode=orange';
-    } else {document.cookie = '_colourMode'}
+    } else {document.cookie = '_colourMode=blue'}
 };
 
 document.write(`<header><ul><li id='/home'><a href='index.html'>Home</a></li>`);
