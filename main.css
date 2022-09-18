@@ -139,6 +139,10 @@ header > ul > li:hover > ul {
     background: var(--bannerInteract0);
 }
 
+.ball:hover, .modeSwitch > input[type="checkbox"]:hover + .ball {
+    background: var(--itemHover0);
+}
+
 .modeSwitch > input {
     position: absolute;
     opacity: 0;
