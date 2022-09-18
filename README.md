@@ -3,3 +3,5 @@ This is the Water Games website code (up to date) which I will be updating when 
 
 This website will have anything i think is worth posting and i am trying to make this primarily dynamic.
 An example of this is dynamic style is with my header.js which auto genarates a header each page.
+
+I have added a colour changing mode on the top right of the header which will change the scheme of the header.
