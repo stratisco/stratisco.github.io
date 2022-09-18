@@ -6,8 +6,6 @@ var colourMode = 0;
 var tmp;
 var colourList = ['bannerAccent', 'bannerInteract', 'itemHover', 'background'];
 
-document.cookie = "testCookie1=well it works";
-
 var headers = {
     '1 Player Games': {
         'src': '1PlayerGames.html',
@@ -136,7 +134,23 @@ var pages = {
     }*/
 };
 
-function modeSwitcher(elm) {
+function getCookie(cname) { //from w3schools
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+};
+
+function modeSwitcher(elm=null) {
     for (peice in colourList) {
         tmp = style.getPropertyValue(`--${colourList[peice]}1`);
         
@@ -145,7 +159,10 @@ function modeSwitcher(elm) {
         
         document.body.style.setProperty(`--${colourList[peice]}0`, tmp);
     }
-}
+    if (getCookie('_colourMode') = 'blue') {
+        document.cookie = '_colourMode=orange';
+    } else {document.cookie = '_colourMode'}
+};
 
 document.write(`<header><ul><li id='/home'><a href='index.html'>Home</a></li>`);
 
@@ -164,7 +181,7 @@ for (cHead in headers) {
         }
     }
     i++;
-}
+};
 
 document.write(`</ul></li>
 <label class="modeSwitch">
@@ -178,3 +195,9 @@ document.addEventListener('keydown', function (key) { // no arrow key web move
     key.preventDefault();
   }
 }, false);
+
+if (getCookie('_colourMode') == 'blue') {
+    modeSwitcher();
+} else {
+    document.cookie = '_colourMode=orange'
+}
