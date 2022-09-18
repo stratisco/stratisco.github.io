@@ -198,6 +198,7 @@ document.addEventListener('keydown', function (key) { // no arrow key web move
 
 if (getCookie('_colourMode') == 'blue') {
     modeSwitcher();
+    document.cookie = '_colourMode=blue'
 } else {
     document.cookie = '_colourMode=orange'
 }
