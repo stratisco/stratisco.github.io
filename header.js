@@ -7,7 +7,7 @@ var tmp;
 var colourList = ['bannerAccent', 'bannerInteract', 'itemHover', 'background'];
 var allowCookies = false;
 
-if (document.cookies == '' && window.location.protocol != 'file:') {
+if (document.cookie == '' && window.location.protocol != 'file:') {
     document.write(`
 <div class="cookieBanner">
 	<p>By using my website you are agreeing to the use of cookies</p>
