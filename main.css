@@ -140,7 +140,8 @@ header > ul > li:hover > ul {
 }
 
 .ball:hover, .modeSwitch > input[type="checkbox"]:hover + .ball {
-    background: var(--itemHover0);
+   /* background: var(--itemHover0);*/
+    filter: brightness(130%);
 }
 
 .modeSwitch > input {

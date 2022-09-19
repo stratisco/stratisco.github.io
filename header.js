@@ -5,6 +5,7 @@ var style = getComputedStyle(document.body);
 var colourMode = 0;
 var tmp;
 var colourList = ['bannerAccent', 'bannerInteract', 'itemHover', 'background'];
+var allowCookies = true;
 
 var headers = {
     '1 Player Games': {
@@ -134,12 +135,18 @@ var pages = {
     }*/
 };
 
+function setCookie(name, value) {
+    if (allowCookies) {
+        document.cookie = `${name}=${value}`;
+    }
+};
+
 function getCookie(cname) { //from w3schools
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(i=0;i<ca.length;i++) {
+    var c = ca[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
@@ -160,8 +167,8 @@ function modeSwitcher(elm=null) {
         document.body.style.setProperty(`--${colourList[peice]}0`, tmp);
     }
     if (getCookie('_colourMode') == 'blue') {
-        document.cookie = '_colourMode=orange';
-    } else {document.cookie = '_colourMode=blue'}
+        setCookie('_colourMode', 'orange');
+    } else {setCookie('_colourMode', 'blue');}
 };
 
 document.write(`<header><ul><li id='/home'><a href='index.html'>Home</a></li>`);
@@ -198,7 +205,7 @@ document.addEventListener('keydown', function (key) { // no arrow key web move
 
 if (getCookie('_colourMode') == 'blue') {
     modeSwitcher();
-    document.cookie = '_colourMode=blue'
+    setCookie('_colourMode', 'blue');
 } else {
-    document.cookie = '_colourMode=orange'
+    setCookie('_colourMode', 'orange');
 }
