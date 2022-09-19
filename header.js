@@ -145,12 +145,6 @@ var pages = {
     }*/
 };
 
-function setCookie(name, value) {
-    if (allowCookies) {
-        document.cookie = `${name}=${value}`;
-    }
-};
-
 function getCookie(cname) { //from w3schools
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -165,6 +159,12 @@ function getCookie(cname) { //from w3schools
     }
   }
   return "";
+};
+
+function setCookie(name, value) {
+    if (getCookie('cookies') == 'accepted') {
+        document.cookie = `${name}=${value}`;
+    }
 };
 
 function modeSwitcher(elm=null) {
