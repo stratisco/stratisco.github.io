@@ -13,6 +13,8 @@ if (document.cookie == '' && window.location.protocol != 'file:') {
 	<p>By using my website you are agreeing to the use of cookies</p>
 	<button class="cookieButton" onClick='document.querySelector("body > div").style.display = "none"; document.cookie = "cookies=accepted"; allowCookies = true'>&times;</button>
 </div>`)
+} else {
+    allowCookies = true;
 }
 
 
@@ -162,7 +164,7 @@ function getCookie(cname) { //from w3schools
 };
 
 function setCookie(name, value) {
-    if (getCookie('cookies') == 'accepted') {
+    if (allowCookies) {
         document.cookie = `${name}=${value}`;
     }
 };
