@@ -5,7 +5,17 @@ var style = getComputedStyle(document.body);
 var colourMode = 0;
 var tmp;
 var colourList = ['bannerAccent', 'bannerInteract', 'itemHover', 'background'];
-var allowCookies = true;
+var allowCookies = false;
+
+if (document.cookies == '' && window.location.protocol != 'file:') {
+    document.write(`
+<div class="cookieBanner">
+	<p>By using my website you are agreeing to the use of cookies</p>
+	<button class="cookieButton" onClick='document.querySelector("body > div").style.display = "none"; document.cookie = "cookies=accepted"; allowCookies = true'>&times;</button>
+</div>`)
+}
+
+
 
 var headers = {
     '1 Player Games': {
