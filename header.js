@@ -109,6 +109,13 @@ var pages = {
         'show': true
     },
     
+    'Water Server' : {
+        'src': 'http://waterserver.sytes.net/',
+        'tags': '00010',
+        'class': null,
+        'show': true
+    },
+
     'Hummas Server' : {
         'src': 'http://hummasserver.ddns.net/',
         'tags': '00010',
