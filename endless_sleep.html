@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Endless Sleep</title>
+        <meta charset="utf-8">
+        <style>
+            p, h1 {
+                margin: 0px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Endless Sleep</h1>
+        <br><br>
+
+        <script>
+
+            function refill() {
+                while (true) {
+                    let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+                    if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+                    document.body.insertAdjacentHTML("beforeend", `<p>Tired</p><p>Sleepy</p><p>Want to sleep</p><p>Fall asleep</p><p>In love</p><p>Into a grave</p><p>A grave mistake</p><p>A mistaken life</p><p>A life to live</p><p>To die</p><p>To wonder why</p><p>To ponder how</p><p>And now</p><p>A point in time</p><p>Time to spare</p><p>Spare keys</p><p>Keys to my heart</p><p>The heart of the city</p><p>The city of fame</p><p>Of shame</p><p>Of gold</p><p>Of old</p><p>The old ways lost</p><p>Lost to time</p><p>To the vast ocean</p><p>The endless sea</p><p>Endless soon to be</p><p>Soon to cross the road</p><p>To cross your heart</p><p>Your mind</p><p>You fall apart</p><p>You think your mine</p><p>A finer soul</p><p>Fine as gold</p><p>A golden heart</p><p>The path to hell</p><p>Hell on earth</p><p>The flat earth</p><p>Flat out of their mind</p><p>Im going insane</p><p>Protect me from the world</p><p>From myself</p><p>My mind is lost</p><p>I need to wait</p><p>Waiting forever</p><p>Oh so tired</p>`);
+                }
+            }
+
+            window.addEventListener('scroll', refill);
+
+            refill();
+        </script>
+
+    </body>
+
+</html>
