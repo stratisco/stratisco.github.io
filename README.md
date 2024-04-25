@@ -1,6 +1,6 @@
-# This website is now hosted on my website https://waterserver.sytes.net/watergames/ where i update it.
+This website is now hosted on my website https://waterserver.sytes.net/watergames/ where i update it.
 
-# This repository is for source code and historical purposes only.
+This repository is for source code and historical purposes only.
 
 # stratisco.github.io
 This is the Water Games website code (not up to date) which I will be updating when sufficient changes are made. I plan to have multiple projects hosted here with Water Games as their central home page. I have linked the preview website for this bellow.
