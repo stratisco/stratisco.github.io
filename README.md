@@ -1,3 +1,5 @@
+:no_entry: [DEPRECATED]
+
 This website is now hosted on my website https://waterserver.sytes.net/watergames/ where i update it.
 
 This repository is for source code and historical purposes only.
